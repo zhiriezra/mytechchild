@@ -1,0 +1,27 @@
+.team-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+  }
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .card-text {
+    color: #6c757d;
+  }

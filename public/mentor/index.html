@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Home - TechChild</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ asset('mentor/assets/img/favicon-32x32.png') }}" rel="icon">
+  <link href="{{ asset('mentor/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('mentor/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('mentor/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('mentor/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('mentor/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('mentor/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ asset('mentor/assets/css/main.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="{{ asset('mentor/assets/img/techlogo.png') }}" alt="">
+        <!-- <h1 class="sitename">TechChildAfrica</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#trainers-index">Instructors</a></li>
+          <!-- <li><a href="events.html">Events</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="https://learn.mytechchild.com/login/index.php">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{{ asset('mentor/assets/img/hero-banner.jpg') }}" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-delay="100">Coding for African Kids<br>Building Skills, Building Dreams!</h2>
+        <!-- <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with Bootstrap</p> -->
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://learn.mytechchild.com/login/index.php" class="btn-get-started">Get Started</a>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <section class="about section">
+
+      <div class="container" id="about">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="{{ asset('mentor/assets/img/about.jpg') }}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>About Tech Child</h3>
+            <p class="fst-italic">
+              Welcome to Tech Child, where we are dedicated to empowering the next generation through the exciting world of technology. Our mission is to make coding and digital creativity accessible, engaging, and fun for kids of all ages. At Tech Child, we believe that every child has the potential to be a creator, innovator, and problem-solver, and we’re here to guide them every step of the way.
+            </p>
+
+            <p class="fst-italic">
+              We offer a variety of coding and digital design courses specifically tailored for young minds. Our expert instructors are more than just teachers—they're mentors who inspire and nurture creativity. With a curriculum that seamlessly blends fun with learning, we aim to make technology an adventure, whether through coding, game design, or digital art.
+            </p>
+            <p class="fst-italic">
+              Our hands-on, interactive approach ensures that each child learns by doing, building practical skills that will serve them well into the future. At Tech Child, we focus not just on technical proficiency, but also on fostering critical thinking and creativity. Whether your child is just starting out or already has some experience, we have a program designed to help them grow and thrive.
+            </p>
+
+            <p class="fst-italic">
+            Join us at Tech Child, and watch your child’s ideas come to life through technology. Together, we’re building a future where every child is empowered to be a digital creator
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /About Section -->
+
+
+    <!-- Courses Section -->
+    <section class="courses section">
+
+      <!-- Section Title -->
+      <div id="courses" class="container section-title" data-aos="fade-up">
+        <h2>Classes</h2>
+        <p>Popular Classes</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item">
+              <img src="{{ asset('mentor/assets/img/kids-wearing-virtual-reality-goggles.jpg') }}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category bg-success">Ongoing</p>
+                  <!-- <p class="price">$65.00</p> -->
+                </div>
+
+                <h3><a href="https://learn.mytechchild.com/course/view.php?id=3">Summer Classess</a></h3>
+
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item">
+              <img src="{{ asset('mentor/assets/img/little-boy-participating-online-class.jpg') }}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category">Coming Soon</p>
+                  <!-- <p class="price">$65.00</p> -->
+                </div>
+
+                <h3><a href="#">Weekend Classes</a></h3>
+
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Courses Section -->
+
+    <section class="section trainers-index">
+
+      <div class="container" id="trainers-index">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="{{ asset('mentor/assets/img/trainers/excel.jpg') }}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Excel</h4>
+                <!-- <span>Web Development</span> -->
+                <p class="">
+                  Meet Excel, our dedicated instructor with a passion for sparking kids' interest in technology. With over a year of experience in guiding young learners through the exciting world of coding, Excel delights in watching their creative ideas come to life through programming.
+
+                  <!-- Her skills in Canva design further empower students to explore their artistic talents and turn their visions into reality.  -->
+
+                  <!-- Excel is committed to making technology both fun and accessible, ensuring that the next generation of tech enthusiasts is inspired and engaged. -->
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="{{ asset('mentor/assets/img/trainers/nelson.png') }}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Nelson</h4>
+                <!-- <span>Marketing</span> -->
+                <p>
+                  Meet Nelson, a seasoned ICT trainer with over 7 years of experience in the industry. Nelson specializes in delivering tailored training programs that address the diverse needs of learners at all levels.
+
+                  <!-- With a deep passion for both technology and education, he is dedicated to empowering individuals and organizations through practical, hands-on ICT training. -->
+                  <!-- Holding a Bachelor’s degree in Computer Science and a Master’s degree in Database Information Systems, Nelson brings extensive experience from both academic and corporate settings. He excels at designing and implementing comprehensive training programs, ensuring that every learner gains the essential technological skills needed to succeed. Nelson's commitment to effective education and his expertise in ICT make him a valuable asset in fostering growth and innovation. -->
+
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="{{ asset('mentor/assets/img/trainers/emmanuel.jpg') }}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Emmanuel</h4>
+                <!-- <span>Content</span> -->
+                <p>
+                  Meet Emmanuel, a dedicated B.Sc. Computer Science graduate from Benue State University. With advanced skills in Microsoft PowerPoint and Excel, Emmanuel excels at creating impactful presentations and conducting data-driven analysis.
+
+                  <!-- His keen eye for detail and passion for technology enable him to craft engaging visual content and develop sophisticated data models. Emmanuel’s proficiency with these essential tools enhances productivity and supports seamless communication across diverse teams. Committed to continuous learning and innovation, he is dedicated to contributing effectively to tech-driven projects and fostering organizational growth through his expertise in PowerPoint and Excel. -->
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Trainers Index Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <!-- <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">TechChild</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A23, 1st Avenue Gwarinpa</p>
+            <p>Abuja, Nigeria</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+234 7035621550</span></p>
+            <p><strong>Email:</strong> <span>info@techchilafrica.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div> -->
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">TechChild</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ asset('mentor/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('mentor/assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('mentor/assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('mentor/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('mentor/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ asset('mentor/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ asset('mentor/assets/js/main.js') }}"></script>
+
+</body>
+
+</html>
