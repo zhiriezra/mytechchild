@@ -129,7 +129,7 @@
                 <ul class="contact-list">
                     <li>
                         <i class="fal fa-map-marker-alt"></i>
-                        (+234) 7035621550
+                        (+234) 813 710 7913
                     </li>
                     <li>
                         <i class="far fa-envelope"></i>
@@ -338,7 +338,7 @@
                                 </li>
                                 <li>
                                     <i class="fa-solid fa-phone"></i>
-                                    <a href="#" class="link">012547892354</a>
+                                    <a href="#" class="link">(+234) 813 710 7913</a>
                                 </li>
                             </ul>
                         </div>
