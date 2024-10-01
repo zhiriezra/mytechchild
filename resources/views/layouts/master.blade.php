@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="mugli">
-    <meta name="description" content="Ascent - Kids Kindergarden School HTML Template">
+    <meta name="description" content="My Tech Child - Catch them young">
     <!-- ======== Page title ============ -->
-    <title>Ascent - Chindcare & Kids School HTML Template</title>
+    <title>My Tech Child - Catch them young</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="{{ asset('ascent/assets/img/faveicon.png') }}">
     <!--<< Bootstrap min.css') }} >>-->
@@ -70,7 +70,7 @@
                                     <i class="fal fa-map-marker-alt"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="#">6391 Elgin St. Celina, 10299</a>
+                                    <a target="_blank" href="#"> Central Business District Area, Abuja.</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -78,8 +78,8 @@
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a href="mailto:info@example.com"><span
-                                            class="mailto:info@example.com">info@example.com</span></a>
+                                    <a href="mailto:info@mytechchild.com"><span
+                                            class="mailto:info@mytechchild.com">info@mytechchild.com</span></a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -95,26 +95,26 @@
                                     <i class="far fa-phone"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a href="tel:+11002345909">(629) 555-0129</a>
+                                    <a href="tel:+11002345909">(+234) 813 710 7913</a>
                                 </div>
                             </li>
                         </ul>
                         <div class="header-button mt-4">
-                            <a href="contact.html" class="theme-btn p2-bg text-center">
+                            <a href="#" class="theme-btn p2-bg text-center">
                                 <span>
-                                    Get A Quote
+                                    Login
                                     <span class="ani-arrow">
                                         <i class="fa-solid fa-arrow-right-long"></i>
                                     </span>
                                 </span>
                             </a>
                         </div>
-                        <div class="social-icon d-flex align-items-center">
+                        {{-- <div class="social-icon d-flex align-items-center">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-youtube"></i></a>
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -173,54 +173,15 @@
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li class="has-dropdown active menu-thumb">
-                                            <a href="index.html">
-                                                Home
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu has-homemenu">
-                                                <li>
-                                                    <div class="homemenu-items">
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb">
-                                                                <img src="{{ asset('ascent/assets/img/header/home-1.jpg') }}" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="index.html" class="theme-btn p5-bg">
-                                                                        <span>Home 01</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home Version 01
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img src="{{ asset('ascent/assets/img/header/home-2.jpg') }}" alt="img">
-                                                                <div class="demo-button">
-                                                                    <a href="index-2.html" class="theme-btn p5-bg">
-                                                                        <span>Home 02</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    Home Version 02
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="/">Home</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('about') }}">About Us</a>
                                         </li>
 
                                         <li>
-                                            <a href="contact.html">Contact Us</a>
+                                            <a href="#">Contact Us</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -230,7 +191,7 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </a>
                         <div class="header-button d-sm-block d-none">
-                            <a href="contact.html" class="theme-btn p5-bg">
+                            <a href="#" class="theme-btn p5-bg">
                                 <span>
                                     Login
                                     <i class="fa-solid fa-arrow-right-long"></i>
@@ -313,7 +274,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">
+                                    <a href="#">
                                        Contact Us
                                     </a>
                                 </li>
@@ -355,17 +316,17 @@
                     </p>
                     <ul class="footer-menu wow fadeInRight" data-wow-delay=".5s">
                         <li>
-                            <a href="contact.html">
+                            <a href="#">
                                 Trams & Condition
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html">
+                            <a href="#">
                                 Privacy Policy
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html">
+                            <a href="#">
                                 Contact Us
                             </a>
                         </li>
