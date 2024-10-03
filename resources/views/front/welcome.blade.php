@@ -27,7 +27,7 @@
                         <p class="wow fadeInUp" data-wow-delay=".5s">
                             We offer a variety of coding and digital design courses specifically tailored for young minds.
                         </p>
-                        <a href="contact.html" class="theme-btn p4-bg">
+                        <a href="{{ route('about') }}" class="theme-btn p4-bg">
                             <span>
                                 Learn More
                             </span>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="content">
                             <h3>
-                                <span class="count">25</span>K
+                                <span class="count">150</span>
                             </h3>
                             <p>Running Students</p>
                         </div>
@@ -94,7 +94,7 @@
                         </div>
                         <div class="content">
                             <h3>
-                                <span class="count">3</span>K
+                                <span class="count">2</span>
                             </h3>
                             <p>Award Winning</p>
                         </div>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="content">
                             <h3>
-                                <span class="count">12</span>K
+                                <span class="count">500</span>
                             </h3>
                             <p>Completed</p>
                         </div>
@@ -120,9 +120,9 @@
                         </div>
                         <div class="content">
                             <h3>
-                                <span class="count">13</span>K
+                                <span class="count">25</span>
                             </h3>
-                            <p>Guardian Satishfaction</p>
+                            <p>Parent/Guardian Satisfaction</p>
                         </div>
                     </div>
                 </div>
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                Hear what our clients have said over the years...
+                See how our coding classes are making a difference in the lives of young learners. Read inspiring testimonials from parents and students who have achieved incredible results.
             </div>
         </div>
         <div class="testimonial-innerbox">
@@ -262,20 +262,48 @@
                                             </div>
                                             <div class="cont">
                                                 <h4 class="black mb-1">
-                                                    Alex smith
+                                                    Christian Franklin
                                                 </h4>
                                                 <span class="black fw-normal">
-                                                    Marketing manager
+                                                    Parent
                                                 </span>
                                             </div>
                                         </div>
                                         <img src="{{ asset('ascent/assets/img/atestimonial/quote.png') }}" alt="img" class="quote-testi">
                                     </div>
                                     <p class="pra mt-24 mb-40">
-                                        Their product exceeded his my routi expectations. The the quality and
-                                        attention to detail a the a
-                                        most outstanding and
-                                        it has become an essential most a education the man who can do
+                                        My son and daughter have already made their own simple games and projects. It’s amazing to see their progress, and they’re so proud of what they’ve created.
+                                    </p>
+                                    <div class="ratting-area d-flex align-items-center gap-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item01">
+                                    <div class="d-flex align-items-center justify-content-between gap-1">
+                                        <div class="man-info d-flex align-items-center">
+                                            <div class="thumb">
+                                                <img src="{{ asset('ascent/assets/img/atestimonial/testimonial-small.png') }}" alt="">
+                                            </div>
+                                            <div class="cont">
+                                                <h4 class="black mb-1">
+                                                    Oluchi Badmus
+                                                </h4>
+                                                <span class="black fw-normal">
+                                                    Parent
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <img src="{{ asset('ascent/assets/img/atestimonial/quote.png') }}" alt="img" class="quote-testi">
+                                    </div>
+                                    <p class="pra mt-24 mb-40">
+                                        As a parent with no coding experience, I wasn’t sure how to help my child. But the website provides easy guides and tips for parents too. It’s a win-win!
                                     </p>
                                     <div class="ratting-area d-flex align-items-center gap-2">
                                         <i class="fas fa-star"></i>
@@ -286,8 +314,41 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-item01">
+                                    <div class="d-flex align-items-center justify-content-between gap-1">
+                                        <div class="man-info d-flex align-items-center">
+                                            <div class="thumb">
+                                                <img src="{{ asset('ascent/assets/img/atestimonial/testimonial-small.png') }}" alt="">
+                                            </div>
+                                            <div class="cont">
+                                                <h4 class="black mb-1">
+                                                    Olarenwaju Idris
+                                                </h4>
+                                                <span class="black fw-normal">
+                                                    Parent
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <img src="{{ asset('ascent/assets/img/atestimonial/quote.png') }}" alt="img" class="quote-testi">
+                                    </div>
+                                    <p class="pra mt-24 mb-40">
+                                        It’s been amazing to watch my children bring their ideas to life through coding. They’ve already made their own projects, and seeing their sense of accomplishment is priceless!
+                                    </p>
+                                    <div class="ratting-area d-flex align-items-center gap-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>

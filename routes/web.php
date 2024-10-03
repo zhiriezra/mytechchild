@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [FrontController::class, 'welcome']);
 Route::get('/about', [FrontController::class, 'about'])->name('about');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

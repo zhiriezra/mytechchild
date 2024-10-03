@@ -12,7 +12,7 @@
     <!-- ======== Page title ============ -->
     <title>My Tech Child - Catch them young</title>
     <!--<< Favcion >>-->
-    <link rel="shortcut icon" href="{{ asset('ascent/assets/img/faveicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('ascent/assets/img/logo/favicon_io/android-chrome-512x512.png') }}">
     <!--<< Bootstrap min.css') }} >>-->
     <link rel="stylesheet" href="{{ asset('ascent/assets/css/bootstrap.min.css') }}">
     <!--<< All Min Css >>-->
@@ -51,8 +51,8 @@
                 <div class="offcanvas__content">
                     <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
-                            <a href="index.html">
-                                <img src="{{ asset('ascent/assets/img/logo/logo.png') }}" alt="logo-img">
+                            <a href="/">
+                                <img src="{{ asset('ascent/assets/img/logo/techlogo1.png') }}" width="150" alt="logo-img">
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -100,7 +100,7 @@
                             </li>
                         </ul>
                         <div class="header-button mt-4">
-                            <a href="#" class="theme-btn p2-bg text-center">
+                            <a href="{{ route('login') }}" class="theme-btn p2-bg text-center">
                                 <span>
                                     Login
                                     <span class="ani-arrow">
@@ -163,8 +163,8 @@
                 <div class="header-main style-2">
                     <div class="header-left">
                         <div class="logo">
-                            <a href="index.html" class="header-logo">
-                                <img src="{{ asset('ascent/assets/img/logo/techlogo.png') }}" alt="logo-img">
+                            <a href="/" class="header-logo">
+                                <img src="{{ asset('ascent/assets/img/logo/techlogo.png') }}" width="200" alt="logo-img">
                             </a>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </a>
                         <div class="header-button d-sm-block d-none">
-                            <a href="#" class="theme-btn p5-bg">
+                            <a href="{{ route('login') }}" class="theme-btn p5-bg">
                                 <span>
                                     Login
                                     <i class="fa-solid fa-arrow-right-long"></i>
@@ -234,7 +234,7 @@
                         <div class="single-footer-widget">
                             <div class="widget-heads">
                                 <a href="index.html" class="footer-logo">
-                                    <img src="{{ asset('ascent/assets/img/logo/techlogo.png') }}" alt="logo-img">
+                                    <img src="{{ asset('ascent/assets/img/logo/techlogo.png') }}" width="200" alt="logo-img">
                                 </a>
                             </div>
                             <div class="footer-content">
