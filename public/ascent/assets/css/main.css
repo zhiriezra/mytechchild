@@ -5106,6 +5106,19 @@ input.main-search-input::placeholder {
   }
 }
 
+.section-padding-sm {
+    padding: 60px 0;
+}
+  @media (max-width: 1199px) {
+    .section-padding-sm {
+      padding: 50px 0;
+    }
+}
+  @media (max-width: 991px) {
+    .section-padding-sm {
+      padding: 40px 0;
+    }
+}
 .space-top {
   padding-top: 120px;
 }

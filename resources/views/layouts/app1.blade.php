@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{{ asset('ascent/assets/css/nice-select.css') }}">
     <!--<< Main.css') }} >>-->
     <link rel="stylesheet" href="{{ asset('ascent/assets/css/main.css') }}">
+
+    @livewireStyles
 </head>
 
 <body>
@@ -123,34 +125,14 @@
     <div class="offcanvas__overlay"></div>
 
     <!-- Header Top Section Start -->
-    <div class="header-top-section d-lg-block d-none">
+    <div class="header-top-section d-lg-block d-none bg-success">
         <div class="container">
             <div class="header-top-wrapper">
                 <ul class="contact-list">
-                    <li>
-                        <i class="fal fa-map-marker-alt"></i>
-                        (+234) 813 710 7913
-                    </li>
-                    <li>
-                        <i class="far fa-envelope"></i>
-                        <a href="info@example.com" class="link">info@mytechchild.com</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <a href="#" class="link">Central Business District Area, Abuja.</a>
-                    </li>
+                    <li>Hi, {{ auth()->user()->name }}</li>
                 </ul>
                 <div class="social-wrapper d-flex align-items-center">
-                    <a href="#" class="white"><i class="white fab fa-facebook-f"></i></a>
-                    <a href="#" class="white">
-                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6.55735 5.16157L10.5183 0.65625H9.57971L6.14039 4.56816L3.39341 0.65625H0.225098L4.37906 6.57174L0.225098 11.2963H1.16378L4.79579 7.16516L7.6968 11.2963H10.8651L6.55712 5.16157H6.55735ZM5.2717 6.62386L4.85082 6.03481L1.502 1.34768H2.94375L5.64629 5.13034L6.06717 5.71939L9.58015 10.6363H8.13839L5.2717 6.62409V6.62386Z"
-                                fill="white" />
-                        </svg>
-                    </a>
-                    <a href="#" class="white"><i class="white fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="white"><i class="white fa-brands fa-pinterest-p"></i></a>
+                    <p class="text-white text-bold">Logged in!</p>
                 </div>
             </div>
         </div>
@@ -163,7 +145,7 @@
                 <div class="header-main style-2">
                     <div class="header-left">
                         <div class="logo">
-                            <a href="/" class="header-logo">
+                            <a href="{{ route(auth()->user()->role.'.dashboard') }}" class="header-logo">
                                 <img src="{{ asset('ascent/assets/img/logo/techlogo.png') }}" width="200" alt="logo-img">
                             </a>
                         </div>
@@ -174,36 +156,28 @@
                                 <nav id="mobile-menu">
                                     <ul>
                                         <li>
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('about') }}">About Us</a>
+                                            <a href="/">My Classes</a>
                                         </li>
 
                                         <li>
-                                            <a href="#">Contact Us</a>
+                                            <a href="{{ route('profile') }}">Profile</a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        
+
                         <div class="header-button d-sm-block d-none">
-                            @guest
-                                <a href="{{ route('login') }}" class="theme-btn p5-bg">
-                                    <span>
-                                        Login
-                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                    </span>
-                                </a>
-                            @else
-                                <a href="{{ route('login') }}" class="theme-btn p5-bg">
-                                    <span>
-                                        Dashboard
-                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                    </span>
-                                </a>
-                            @endif
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="theme-btn p3-bg">
+                                <span>
+                                    Logout
+                                    <i class="fa-solid fa-arrow-left-long"></i>
+                                </span>
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </div>
                         <div class="header__hamburger d-xl-none my-auto">
                             <div class="sidebar__toggle">
@@ -372,6 +346,8 @@
     <script src="{{ asset('ascent/assets/js/wow.min.js') }}"></script>
     <!--<< Main.js') }} >>-->
     <script src="{{ asset('ascent/assets/js/main.js') }}"></script>
+
+    @livewireScripts
 </body>
 
 </html>

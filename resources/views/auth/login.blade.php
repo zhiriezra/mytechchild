@@ -3,9 +3,9 @@
 @section('content')
 
 <!-- Talk Counter Section Start -->
-<section class="talk-counter mt-4 space-bottom overflow-hidden">
+<section class="talk-counter space-bottom overflow-hidden" style="background-color: #FFF0E5;">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="mt-5 row justify-content-center">
             <div class="col-lg-6 col-md-8">
                 {{-- <div class="row justify-content-center py-4">
                     <img src="{{ asset('ascent/assets/img/logo/techlogo1.png') }}" style="width: 200px;" alt="">
@@ -54,7 +54,12 @@
                             </span>
                         </button>
                     </div>
+                    <div>
+                        <p class="text-right">Forgot password?</p>
+                        <p>Don't have an account? <a href="{{ route('register') }}" class="text-primary">Create an account</a></p>
+                    </div>
                 </form>
+
             </div>
 
         </div>

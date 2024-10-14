@@ -199,31 +199,20 @@
             </h4>
 
             <div class="row justify-content-center g-xl-4 g-3 mb-60">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="details-thumb-middile w-100">
-                        <img src="{{ asset('ascent/assets/img/aservices/details-middle1.png') }}" alt="img" class="w-100 round10">
+                @foreach ($courses as $key => $course)
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <a href="{{ route('course.details', ['course' => $course->id]) }}">
+                            <div class="details-thumb-middile w-100">
+                                <img src="{{ asset('ascent/assets/img/aservices/details-middle1.png') }}" alt="img" class="w-100 round10">
+                            </div>
+                            <div class="mt-2">
+                                <h5>Coding With Scratch</h5>
+                            </div>
+                        </a>
                     </div>
-                    <div class="mt-2">
-                        <h5>Coding With Scratch</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="details-thumb-middile w-100">
-                        <img src="{{ asset('ascent/assets/img/aservices/details-middle2.png') }}" alt="img" class="w-100 round10">
-                    </div>
-                    <div class="mt-2">
-                        <h5>Coding With Python</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="details-thumb-middile w-100">
-                        <img src="{{ asset('ascent/assets/img/aservices/details-middle3.png') }}" alt="img" class="w-100 round10">
-                    </div>
-                    <div class="mt-2">
-                        <h5>Data Analysis for Kids</h5>
-                    </div>
+                @endforeach
 
-                </div>
+
             </div>
         </div>
 

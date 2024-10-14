@@ -1,6 +1,14 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +24,36 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontController::class, 'welcome']);
 Route::get('/about', [FrontController::class, 'about'])->name('about');
 
+Route::get('/email/verify',[VerificationController::class, 'show'])->middleware('auth')->name('verification.notice');
+Route::get('/email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify')->middleware(['signed']);
+Route::post('/email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
+
+Route::get('/courses/{course}', [FrontController::class, 'courseDetail'])->name('course.details');
+
+
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+    Route::group(['middleware' => ['role:admin', 'verified', 'profile.completed'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
+        Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    });
+
+    Route::group(['middleware' => ['role:teacher', 'verified', 'profile.completed'], 'prefix' => 'teacher', 'as' => 'teacher.'], function () {
+        Route::get('/dashboard', [TeacherController::class, 'index'])->name('dashboard');
+    });
+
+    Route::group(['middleware' => ['role:student', 'verified', 'profile.completed'], 'prefix' => 'student', 'as' => 'student.'], function () {
+        Route::get('/dashboard', [StudentController::class, 'index'])->name('dashboard');
+        Route::get('/courses/{course}/schedules', [StudentController::class, 'showCourseSchedules'])->name('courses.schedules');
+        Route::post('schedules/{schedule}/book', [StudentController::class, 'bookSchedule'])->name('schedules.book');
+        Route::get('schedules/{schedule}/cancel-booking', [StudentController::class, 'cancelSchedule'])->name('schedules.cancel');
+
+    });
+
+});
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified')->name('home');

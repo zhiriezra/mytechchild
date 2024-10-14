@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -28,7 +30,19 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected function redirectTo(){
+        $user = Auth::user();
+
+        if($user->role == 'student'){
+            return '/student/dashboard';
+        }elseif($user->role == 'teacher'){
+            return '/teacher/dashboard';
+        }elseif($user->role == 'admin'){
+            return '/admin/dashboard';
+        }else{
+            return '/home';
+        }
+    }
 
     /**
      * Create a new controller instance.
@@ -63,10 +77,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'username' => strstr($data['email'], '@', true),
             'password' => Hash::make($data['password']),
         ]);
+
+        Profile::create([
+            'user_id' => $user->id,
+        ]);
+
+        return $user;
     }
 }
