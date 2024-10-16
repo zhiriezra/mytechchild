@@ -14,4 +14,8 @@ class Course extends Model
     public function schedules(){
         return $this->hasMany(CourseSchedule::class);
     }
+
+    public function teachers(){
+        return $this->belongsToMany(Teacher::class);
+    }
 }

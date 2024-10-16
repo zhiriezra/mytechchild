@@ -35,6 +35,7 @@ Route::get('/courses/{course}', [FrontController::class, 'courseDetail'])->name(
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function(){
+
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
@@ -42,16 +43,21 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
     });
 
-    Route::group(['middleware' => ['role:teacher', 'verified', 'profile.completed'], 'prefix' => 'teacher', 'as' => 'teacher.'], function () {
+    Route::group(['middleware' => ['role:teacher'], 'prefix' => 'teacher', 'as' => 'teacher.'], function () {
         Route::get('/dashboard', [TeacherController::class, 'index'])->name('dashboard');
+
+        Route::get('/courses/{course}/schedules', [TeacherController::class, 'showCourseSchedules'])->name('courses.schedules');
+        Route::get('courses/{course}/schedules/add', [TeacherController::class, 'addSchedule'])->name('add.schedule');
+        Route::post('courses/{course}/schedules/add', [TeacherController::class, 'storeSchedule'])->name('store.schedule');
+
     });
 
-    Route::group(['middleware' => ['role:student', 'verified', 'profile.completed'], 'prefix' => 'student', 'as' => 'student.'], function () {
+    // DON'T FORGET TO ADD THESE MIDDLEWARES   1. verified 2. profile.completed
+    Route::group(['middleware' => ['role:student'], 'prefix' => 'student', 'as' => 'student.'], function () {
         Route::get('/dashboard', [StudentController::class, 'index'])->name('dashboard');
         Route::get('/courses/{course}/schedules', [StudentController::class, 'showCourseSchedules'])->name('courses.schedules');
         Route::post('schedules/{schedule}/book', [StudentController::class, 'bookSchedule'])->name('schedules.book');
         Route::get('schedules/{schedule}/cancel-booking', [StudentController::class, 'cancelSchedule'])->name('schedules.cancel');
-
     });
 
 });

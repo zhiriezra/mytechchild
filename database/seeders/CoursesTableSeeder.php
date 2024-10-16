@@ -7,6 +7,7 @@ use App\Models\CourseSchedule;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CoursesTableSeeder extends Seeder
 {
@@ -21,6 +22,7 @@ class CoursesTableSeeder extends Seeder
             'title' => 'Coding with Scratch',
             'description' => 'Basic concepts of programming.',
             'image' => 'default.png',
+            'amount' => 25000,
             'active' => 1
         ]);
 
@@ -28,6 +30,7 @@ class CoursesTableSeeder extends Seeder
             'title' => 'Coding with Python',
             'description' => 'Basic concepts of python programming.',
             'image' => 'default.png',
+            'amount' => 25000,
             'active' => 1
         ]);
 
@@ -35,6 +38,7 @@ class CoursesTableSeeder extends Seeder
             'title' => 'Data Analysis',
             'description' => 'Basic concepts of data analysis programming.',
             'image' => 'default.png',
+            'amount' => 25000,
             'active' => 0
         ]);
 
@@ -60,5 +64,11 @@ class CoursesTableSeeder extends Seeder
             'end_time' => Carbon::now()->addDays(2)->setTime(11, 0),
             'capacity' => 20,
         ]);
+
+        DB::table('course_teacher')->insert([
+            'course_id' => 1,
+            'teacher_id' => 1
+        ]);
+
     }
 }

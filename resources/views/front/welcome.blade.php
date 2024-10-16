@@ -206,7 +206,10 @@
                                 <img src="{{ asset('ascent/assets/img/aservices/details-middle1.png') }}" alt="img" class="w-100 round10">
                             </div>
                             <div class="mt-2">
-                                <h5>Coding With Scratch</h5>
+                                <h5>{{ $course->title }}</h5>
+                            </div>
+                            <div>
+                                <h6>${{ number_format($course->amount, 2) }}</h6>
                             </div>
                         </a>
                     </div>

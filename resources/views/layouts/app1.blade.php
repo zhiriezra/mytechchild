@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="{{ asset('ascent/assets/css/nice-select.css') }}">
     <!--<< Main.css') }} >>-->
     <link rel="stylesheet" href="{{ asset('ascent/assets/css/main.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @livewireStyles
 </head>
 
@@ -156,7 +156,7 @@
                                 <nav id="mobile-menu">
                                     <ul>
                                         <li>
-                                            <a href="/">My Classes</a>
+                                            <a href="{{ route(auth()->user()->role.'.dashboard')}}">My Classes</a>
                                         </li>
 
                                         <li>
@@ -323,6 +323,8 @@
         <img src="{{ asset('ascent/assets/img/footer/f-cut.png') }}" alt="img" class="footer-cut position-absolute">
         <!-- Element -->
     </footer>
+
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!--<< All JS Plugins >>-->
     <script src="{{ asset('ascent/assets/js/jquery-3.7.1.min.js') }}"></script>

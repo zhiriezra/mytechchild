@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Profile;
+use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,7 +19,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
 
-        $user =  User::create([
+        $user1 =  User::create([
             'name' => 'Silas Abdul',
             'email' => 'silas@gmail.com',
             'username' => 'silas',
@@ -26,8 +27,25 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('password')
         ]);
 
+        $user2 =  User::create([
+            'name' => 'Nelson Excel',
+            'email' => 'excel@gmail.com',
+            'username' => 'excel',
+            'mobile' => '07035621551',
+            'password' => bcrypt('password'),
+            'role' => 'teacher',
+        ]);
+
         Profile::create([
-            'user_id' => $user->id,
+            'user_id' => $user1->id,
+        ]);
+
+        Profile::create([
+            'user_id' => $user2->id,
+        ]);
+
+        Teacher::create([
+            'user_id' => $user2->id,
         ]);
     }
 }
