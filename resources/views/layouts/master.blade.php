@@ -79,17 +79,10 @@
                                 </div>
                                 <div class="offcanvas__contact-text">
                                     <a href="mailto:info@mytechchild.com"><span
-                                            class="mailto:info@mytechchild.com">info@mytechchild.com</span></a>
+                                            class="mailto:info@mytechchild.com">hello@mytechchild.com</span></a>
                                 </div>
                             </li>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon mr-15">
-                                    <i class="fal fa-clock"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="#">Mod-friday, 06am -02pm</a>
-                                </div>
-                            </li>
+
                             <li class="d-flex align-items-center">
                                 <div class="offcanvas__contact-icon mr-15">
                                     <i class="far fa-phone"></i>
@@ -133,7 +126,7 @@
                     </li>
                     <li>
                         <i class="far fa-envelope"></i>
-                        <a href="info@example.com" class="link">info@mytechchild.com</a>
+                        <a href="hello@mytechchild.com" class="link">hello@mytechchild.com</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-location-dot"></i>
@@ -141,16 +134,8 @@
                     </li>
                 </ul>
                 <div class="social-wrapper d-flex align-items-center">
-                    <a href="#" class="white"><i class="white fab fa-facebook-f"></i></a>
-                    <a href="#" class="white">
-                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6.55735 5.16157L10.5183 0.65625H9.57971L6.14039 4.56816L3.39341 0.65625H0.225098L4.37906 6.57174L0.225098 11.2963H1.16378L4.79579 7.16516L7.6968 11.2963H10.8651L6.55712 5.16157H6.55735ZM5.2717 6.62386L4.85082 6.03481L1.502 1.34768H2.94375L5.64629 5.13034L6.06717 5.71939L9.58015 10.6363H8.13839L5.2717 6.62409V6.62386Z"
-                                fill="white" />
-                        </svg>
-                    </a>
-                    <a href="#" class="white"><i class="white fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="white"><i class="white fa-brands fa-pinterest-p"></i></a>
+                    <a href="https://www.facebook.com/TechChildAfrica/" class="white"><i class="white fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/72130428" class="white"><i class="white fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -179,15 +164,11 @@
                                         <li>
                                             <a href="{{ route('about') }}">About Us</a>
                                         </li>
-
-                                        <li>
-                                            <a href="#">Contact Us</a>
-                                        </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        
+
                         <div class="header-button d-sm-block d-none">
                             @guest
                                 <a href="{{ route('login') }}" class="theme-btn p5-bg">
@@ -245,21 +226,12 @@
                                 </a>
                             </div>
                             <div class="footer-content">
-                                <p class="pre-pragraph">
+                                {{-- <p class="pre-pragraph">
                                     Yes, there are many notable ma corporate the a od businesses Informati worldwide
-                                </p>
+                                </p> --}}
                                 <div class="social-wrapper d-flex align-items-center">
-                                    <a href="#" class="white"><i class="white fab fa-facebook-f"></i></a>
-                                    <a href="#" class="white">
-                                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.55735 5.16157L10.5183 0.65625H9.57971L6.14039 4.56816L3.39341 0.65625H0.225098L4.37906 6.57174L0.225098 11.2963H1.16378L4.79579 7.16516L7.6968 11.2963H10.8651L6.55712 5.16157H6.55735ZM5.2717 6.62386L4.85082 6.03481L1.502 1.34768H2.94375L5.64629 5.13034L6.06717 5.71939L9.58015 10.6363H8.13839L5.2717 6.62409V6.62386Z"
-                                                fill="white" />
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="white"><i class="white fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#" class="white"><i class="white fa-brands fa-pinterest-p"></i></a>
+                                    <a href="https://www.facebook.com/TechChildAfrica/" class="white"><i class="white fab fa-facebook-f"></i></a>
+                                    <a href="https://www.linkedin.com/company/72130428/" class="white"><i class="white fa-brands fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -280,11 +252,11 @@
                                         About Us
                                     </a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="#">
                                        Contact Us
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -302,7 +274,7 @@
                                 </li>
                                 <li>
                                     <i class="far fa-envelope"></i>
-                                    <a href="info@example.com" class="link">info@mytechchild.com</a>
+                                    <a href="hello@mytechchild.com" class="link">hello@mytechchild.com</a>
                                 </li>
                                 <li>
                                     <i class="fa-solid fa-phone"></i>
@@ -330,11 +302,6 @@
                         <li>
                             <a href="#">
                                 Privacy Policy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Contact Us
                             </a>
                         </li>
                     </ul>
