@@ -7,7 +7,7 @@
 
         <div class="common-content-box mb-40 wow fadeInUp" data-wow-delay=".3s">
             <h4 class="custom-title black mb-lg-3 mb-2">
-                Update Schedules for {{ $course->title }}
+                Manage Classes
             </h4>
 
             @if(session('error'))
@@ -21,40 +21,46 @@
             <div class="mb-60">
 
                 <div>
-                    <a href="{{ route('teacher.add.schedule', ['course' => $course->id]) }}" class="btn btn-sm btn-primary">Add Schedule</a>
+                    <a href="{{ route('admin.add.course') }}" class="btn btn-sm btn-primary">Add Class</a>
                 </div>
-                @if($course->schedules->isEmpty())
+                @if($courses->isEmpty())
                     <p>No schedules available for this course.</p>
                 @else
                     <table class="table table-striped text-sm">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Start Time</th>
-                                <th>End Time</th>
-                                <th>Confirmed Slots</th>
+                                <th>Class</th>
+                                <th>NGN Amount</th>
+                                <th>USD Amount</th>
                                 <th>Status</th>
+                                <th>Created</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($course->schedules as $key => $schedule)
+                            @foreach($courses as $key => $course)
                                 <tr>
                                     <td>{{ $key+1 }}</td>
-                                    <td>{{ \Carbon\Carbon::parse($schedule->start_time)->toDayDateTimeString() }}</td>
-                                    <td>{{ \Carbon\Carbon::parse($schedule->end_time)->toDayDateTimeString() }}</td>
+                                    <td>{{ $course->title }}</td>
+                                    <td>&#8358;{{ number_format($course->amount_ngn, 2) }}</td>
+                                    <td>${{ number_format($course->amount_usd, 2) }}</td>
                                     <td>
-                                        @if($schedule->confirmedBookings()->count() == $schedule->availableSlots())
-                                            <span class="text-sm text-success">Capacity Full</span>
+                                        @if($course->active)
+                                            <span class="text-success">Active</span>
                                         @else
-                                            {{ $schedule->confirmedBookings()->count() }}/{{ $schedule->availableSlots() }}
+                                            <span class="text-danger">Inactive</span>
                                         @endif
                                     </td>
+                                    <td>{{ $course->created_at->diffForHumans() }} </td>
                                     <td>
-                                        <span class="text-sm p-1 {{ $schedule->status == 'approved' ? 'text-success' : ($schedule->status == 'declined' ? 'text-danger' : 'text-warning')}}">{{ $schedule->status }}</span>
-                                    </td>
-                                    <td>
-                                        <a href="{{ route('teacher.edit.schedule', ['schedule' => $schedule->id]) }}" class="btn btn-sm btn-info">Edit</a>
+                                        @if($course->active)
+                                            <a class="btn btn-sm btn-danger" href="{{ route('admin.deactivate.course', ['course' => $course->id]) }}">Deactivate</a>
+                                        @else
+                                            <a class="btn btn-sm btn-success" href="{{ route('admin.activate.course', ['course' => $course->id]) }}">Activate</a>
+                                        @endif
+
+                                        <a href="{{ route('admin.edit.course', ['course' => $course->id] )}}" class="btn btn-primary btn-sm">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -64,7 +70,7 @@
 
             </div>
             <div class="text-center">
-                <a href="{{ route('teacher.dashboard') }}" class="btn btn-primary">Back to Classes List</a>
+                <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Back to Dashboard</a>
             </div>
 
         </div>

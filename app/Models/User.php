@@ -49,8 +49,26 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Booking::class);
     }
 
+    public function confirmedBookings(){
+        return $this->bookings()->where('status', 'confirmed')->get();
+    }
+
+    public function myBooking($schedule_id){
+        return $this->hasMany(Booking::class)->where('course_schedule_id', $schedule_id)->first();
+    }
+
     public function teacher(){
         return $this->hasOne(Teacher::class);
+    }
+
+    public function scopeStudents($query)
+    {
+        return $query->where('role', 'student')->get();
+    }
+
+    public function scopeTeachers($query)
+    {
+        return $query->where('role', 'teacher')->get();
     }
 
 }

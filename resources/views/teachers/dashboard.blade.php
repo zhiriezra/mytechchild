@@ -19,14 +19,14 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <a href="{{ route('teacher.courses.schedules', ['course' => $course->id]) }}">
                             <div class="details-thumb-middile w-100">
-                                <img src="{{ asset('ascent/assets/img/aservices/details-middle1.png') }}" alt="img" class="w-100 round10">
+                                <img src="{{ url('storage/images/'.$course->image) }}" alt="img" class="w-100 round10">
                             </div>
                             <div class="mt-2">
                                 <h5>{{ $course->title }}</h5>
                             </div>
 
                             <div>
-                                <h6>${{ number_format($course->amount, 2) }}</h6>
+                                <h6>${{ number_format($course->amount_usd, 2) }}, &#8358;{{ number_format($course->amount_ngn, 2) }}</h6>
                             </div>
                         </a>
                     </div>

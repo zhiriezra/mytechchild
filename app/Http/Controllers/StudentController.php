@@ -13,7 +13,8 @@ class StudentController extends Controller
 {
     public function index(){
         $courses = Course::with('schedules')->where('active', 1)->get();
-        return view('students.dashboard', compact('courses'));
+        $bookings = Auth::user()->confirmedBookings();
+        return view('students.dashboard', compact('courses', 'bookings'));
     }
 
     public function showCourseSchedules($courseId){
@@ -53,11 +54,11 @@ class StudentController extends Controller
        return redirect()->back()->with('success', 'Booking created successfully! Please confirm your booking by making payment.');
     }
 
-    public function cancelSchedule($scheduleId){
-        $booking = Booking::where('user_id', Auth::id())
-            ->where('course_schedule_id', $scheduleId)
-            ->where('status', '!=', 'cancelled')
-            ->first();
+    public function cancelBooking(Booking $booking){
+        // $booking = Booking::where('user_id', Auth::id())
+        //     ->where('course_schedule_id', $scheduleId)
+        //     ->where('status', '!=', 'cancelled')
+        //     ->first();
 
         $booking->delete();
         return redirect()->back()->with('success', 'Booking removed successfully!');

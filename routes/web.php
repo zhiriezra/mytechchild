@@ -3,7 +3,9 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StripeWebhookController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -39,27 +41,55 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
-    Route::group(['middleware' => ['role:admin', 'verified', 'profile.completed'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
-        Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::group(['middleware' => ['role:admin'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
+        Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
+
+        // Admin schedule routes
+        Route::get('schedules', [AdminController::class, 'schedules'])->name('schedules');
+        Route::get('approve/{schedule}', [AdminController::class, 'approveSchedule'])->name('approve.schedule');
+        Route::get('decline/{schedule}', [AdminController::class, 'declineSchedule'])->name('decline.schedule');
+
+        Route::get('courses', [AdminController::class, 'courses'])->name('courses');
+        Route::get('add-course', [AdminController::class, 'addCourse'])->name('add.course');
+        Route::post('add-course', [AdminController::class, 'storeCourse'])->name('store.course');
+        Route::get('edit-course/{course}', [AdminController::class, 'editCourse'])->name('edit.course');
+        Route::post('edit-course/{course}', [AdminController::class, 'updateCourse'])->name('update.course');
+
+        Route::get('activate/{course}', [AdminController::class, 'activateCourse'])->name('activate.course');
+        Route::get('deactivate/{course}', [AdminController::class, 'deactivateCourse'])->name('deactivate.course');
+
     });
 
     Route::group(['middleware' => ['role:teacher'], 'prefix' => 'teacher', 'as' => 'teacher.'], function () {
-        Route::get('/dashboard', [TeacherController::class, 'index'])->name('dashboard');
+        Route::get('dashboard', [TeacherController::class, 'index'])->name('dashboard');
 
-        Route::get('/courses/{course}/schedules', [TeacherController::class, 'showCourseSchedules'])->name('courses.schedules');
+        Route::get('courses/{course}/schedules', [TeacherController::class, 'showCourseSchedules'])->name('courses.schedules');
         Route::get('courses/{course}/schedules/add', [TeacherController::class, 'addSchedule'])->name('add.schedule');
         Route::post('courses/{course}/schedules/add', [TeacherController::class, 'storeSchedule'])->name('store.schedule');
+        Route::get('schedule/{schedule}/edit', [TeacherController::class, 'editSchedule'])->name('edit.schedule');
+        Route::post('schedule/{schedule}/edit', [TeacherController::class, 'updateSchedule'])->name('update.schedule');
+
 
     });
 
     // DON'T FORGET TO ADD THESE MIDDLEWARES   1. verified 2. profile.completed
     Route::group(['middleware' => ['role:student'], 'prefix' => 'student', 'as' => 'student.'], function () {
+
         Route::get('/dashboard', [StudentController::class, 'index'])->name('dashboard');
         Route::get('/courses/{course}/schedules', [StudentController::class, 'showCourseSchedules'])->name('courses.schedules');
-        Route::post('schedules/{schedule}/book', [StudentController::class, 'bookSchedule'])->name('schedules.book');
-        Route::get('schedules/{schedule}/cancel-booking', [StudentController::class, 'cancelSchedule'])->name('schedules.cancel');
+
+        Route::get('booking/{booking}/cancel-booking', [StudentController::class, 'cancelBooking'])->name('booking.cancel');
+        Route::get('bookings/{booking}/confirm-booking', [PaymentController::class, 'showPaymentView'])->name('booking.confirm');
+        Route::post('bookings/{booking}/process-payment', [PaymentController::class, 'processPayment'])->name('process.payment');
+
     });
 
+    Route::get('/checkout/success', [PaymentController::class, 'success'])->name('checkout.success');
+    Route::get('/checkout/cancel', [PaymentController::class, 'cancel'])->name('checkout.cancel');
+
+
 });
+
+Route::post('/webhook', [StripeWebhookController::class, 'handleWebhook']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified')->name('home');

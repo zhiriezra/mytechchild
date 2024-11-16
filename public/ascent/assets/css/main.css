@@ -62,7 +62,7 @@ Version: 1.0.0
   content: "";
   width: 20px;
   height: 20px;
-  background-color: var(--p4-clr);
+  background-color: var(--p2-clr);
   z-index: -1;
   transition: all 0.6s;
   opacity: 0;

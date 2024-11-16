@@ -24,4 +24,9 @@ class Booking extends Model
         return $this->belongsTo(CourseSchedule::class);
     }
 
+    public function scopeConfirmed($query)
+    {
+        return $query->where('status', 'confirmed')->get();
+    }
+
 }

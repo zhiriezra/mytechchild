@@ -19,7 +19,11 @@
             @endif
 
             <div class="mb-60">
-                @if($course->schedules->isEmpty())
+                @livewire('courses.course-schedule-selector',['course' => $course])
+                @livewire('courses.bookings', ['course' => $course])
+
+
+                {{-- @if($course->schedules->isEmpty())
                     <p>No schedules available for this course.</p>
                 @else
                     <table class="table table-striped text-sm">
@@ -45,13 +49,17 @@
 
                                         @if(\Carbon\Carbon::parse($schedule->start_time)->isPast())
                                             <span class="text-danger">Cannot book a schedule that has already started</span>
-                                        @elseif($schedule->checkExistingSchedule(auth()->id()) > 0)
-                                            <a href="#" class="btn btn-sm btn-primary">Make Payment</a>
-                                            <a href="{{ route('student.schedules.cancel', $schedule->id)}} " class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to cancel this booking?')">Cancel Schedule</a>
+                                        @elseif(auth()->user()->myBooking($schedule->id) && auth()->user()->myBooking($schedule->id)->status == 'confirmed')
+                                            <a href="" class="text-success">Confirmed</a>
+                                            <a href="{{ route('student.schedules.cancel', $schedule->id)}} " class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to cancel this booking?')">Cancel booking</a>
+
+                                        @elseif(auth()->user()->myBooking($schedule->id) != null)
+                                            <a href="{{ route('student.booking.confirm', ['booking' => auth()->user()->myBooking($schedule->id)->id ]) }}" class="btn btn-sm btn-primary">Make payment</a>
+                                            <a href="{{ route('student.schedules.cancel', $schedule->id)}} " class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to cancel this booking?')">Cancel schedule</a>
                                         @elseif($schedule->availableSlots() > 0)
                                             <form action="{{ route('student.schedules.book', $schedule->id) }}" method="POST">
                                                 @csrf
-                                                <button type="submit" class="btn btn-success btn-sm">Book Now</button>
+                                                <button type="submit" class="btn btn-success btn-sm">Book now</button>
                                             </form>
                                         @else
                                             <span class="text text-danger" disabled>Class at full capacity</span>
@@ -62,7 +70,8 @@
                             @endforeach
                         </tbody>
                     </table>
-                @endif
+                @endif --}}
+
 
             </div>
             <div class="text-center">

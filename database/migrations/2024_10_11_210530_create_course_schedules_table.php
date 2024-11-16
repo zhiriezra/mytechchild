@@ -19,6 +19,7 @@ return new class extends Migration
             $table->dateTime('start_time');
             $table->dateTime('end_time');
             $table->integer('capacity')->default(0);
+            $table->enum('status', ['approved','declined','pending'])->default('pending');
             $table->timestamps();
         });
     }

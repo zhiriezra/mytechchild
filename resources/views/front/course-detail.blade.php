@@ -113,13 +113,15 @@
                     {{ $course->description}}
                 </p>
 
+                <h6 class="mt-10">${{ number_format($course->amount_usd, 2) }}, &#8358;{{ number_format($course->amount_ngn, 2) }}</h6>
+
                 <div class="mt-5 header-button">
-                    <a href="{{ route('student.dashboard') }}" class="theme-btn p5-bg">Start Class Now</a>
+                    <a href="{{ route('student.courses.schedules', ['course' => $course->id]) }}" class="theme-btn p2-bg">Start Class Now</a>
                 </div>
             </div>
             <div class="align-items-center col-lg-6 col-md-6">
                 <div class="see-all-thumb w-100">
-                    <img src="{{ asset('ascent/assets/img/aservices/details-middle1.png') }}" alt="img" class="w-100 round10">
+                    <img src="{{ url('storage/images/'.$course->image) }}" alt="img" class="w-100 round10">
                 </div>
             </div>
         </div>

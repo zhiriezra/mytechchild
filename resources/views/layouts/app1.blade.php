@@ -155,13 +155,29 @@
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li>
-                                            <a href="{{ route(auth()->user()->role.'.dashboard')}}">My Classes</a>
-                                        </li>
+                                        @if(auth()->user()->role == 'admin')
+                                            <li>
+                                                <a href="{{ route('admin.schedules') }}">Manage Schedules</a>
+                                            </li>
 
-                                        <li>
-                                            <a href="{{ route('profile') }}">Profile</a>
-                                        </li>
+                                            <li>
+                                                <a href="{{ route('admin.courses') }}">Manage Classes</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">Manage Teachers</a>
+                                            </li>
+                                        @endif
+
+                                        @if(auth()->user()->role !== 'admin')
+                                            <li>
+                                                <a href="{{ route(auth()->user()->role.'.dashboard')}}">My Classes</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{{ route('profile') }}">Profile</a>
+                                            </li>
+                                        @endif
                                     </ul>
                                 </nav>
                             </div>
@@ -208,6 +224,7 @@
 
     <!--<< Footer Section Start >>-->
     <footer class="footer-section overflow-hidden position-relative footer-style1 white-bg">
+        @if(!Auth::check())
         <div class="footer-widgets-wrapper">
             <div class="container">
                 <div class="row g-md-4 g-4 justify-content-between">
@@ -288,6 +305,7 @@
                 </div>
             </div>
         </div>
+        @endif
         <div class="footer-bottom">
             <div class="container">
                 <div

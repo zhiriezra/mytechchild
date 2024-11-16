@@ -19,28 +19,23 @@ class CoursesTableSeeder extends Seeder
     public function run()
     {
         $course1 = Course::create([
-            'title' => 'Coding with Scratch',
-            'description' => 'Basic concepts of programming.',
+            'title' => 'Scratch Programming',
+            'description' => "With Scratch, kids start coding in a playful, visual way. They'll learn the basics by creating their own animations, games, and stories. This course builds confidence and creativity—perfect for young beginners!",
             'image' => 'default.png',
-            'amount' => 25000,
+            'amount_ngn' => 25000,
+            'amount_usd' => 25,
             'active' => 1
         ]);
 
         $course2 = Course::create([
-            'title' => 'Coding with Python',
-            'description' => 'Basic concepts of python programming.',
+            'title' => 'App Development for Kids',
+            'description' => "In this course, kids get hands-on with app design and development. They’ll create real, functional apps that teach them core concepts of coding, problem-solving, and design thinking.",
             'image' => 'default.png',
-            'amount' => 25000,
+            'amount_ngn' => 25000,
+            'amount_usd' => 25,
             'active' => 1
         ]);
 
-        $course3 = Course::create([
-            'title' => 'Data Analysis',
-            'description' => 'Basic concepts of data analysis programming.',
-            'image' => 'default.png',
-            'amount' => 25000,
-            'active' => 0
-        ]);
 
         // Create schedules for course1
         CourseSchedule::create([
@@ -51,22 +46,48 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         CourseSchedule::create([
+            'course_id' => $course1->id,
+            'start_time' => Carbon::now()->addDays(2)->setTime(11, 0),
+            'end_time' => Carbon::now()->addDays(5)->setTime(12, 0),
+            'capacity' => 30,
+        ]);
+
+        CourseSchedule::create([
+            'course_id' => $course1->id,
+            'start_time' => Carbon::now()->addDays(2)->setTime(4, 0),
+            'end_time' => Carbon::now()->addDays(5)->setTime(6, 0),
+            'capacity' => 30,
+        ]);
+
+        CourseSchedule::create([
             'course_id' => $course2->id,
-            'start_time' => Carbon::now()->addDays(3)->setTime(14, 0),
-            'end_time' => Carbon::now()->addDays(3)->setTime(16, 0),
+            'start_time' => Carbon::now()->addDays(3)->setTime(2, 0),
+            'end_time' => Carbon::now()->addDays(3)->setTime(3, 0),
             'capacity' => 25,
         ]);
 
-        // Create schedules for course2
         CourseSchedule::create([
-            'course_id' => $course3->id,
-            'start_time' => Carbon::now()->addDays(2)->setTime(9, 0),
-            'end_time' => Carbon::now()->addDays(2)->setTime(11, 0),
-            'capacity' => 20,
+            'course_id' => $course2->id,
+            'start_time' => Carbon::now()->addDays(1)->setTime(6, 0),
+            'end_time' => Carbon::now()->addDays(3)->setTime(8, 0),
+            'capacity' => 25,
+        ]);
+
+        CourseSchedule::create([
+            'course_id' => $course2->id,
+            'start_time' => Carbon::now()->addDays(3)->setTime(16, 0),
+            'end_time' => Carbon::now()->addDays(3)->setTime(18, 0),
+            'capacity' => 25,
         ]);
 
         DB::table('course_teacher')->insert([
             'course_id' => 1,
+            'teacher_id' => 1
+        ]);
+
+
+        DB::table('course_teacher')->insert([
+            'course_id' => 2,
             'teacher_id' => 1
         ]);
 

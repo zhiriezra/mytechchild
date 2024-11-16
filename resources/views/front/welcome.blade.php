@@ -17,19 +17,19 @@
                         <h1 class="wow fadeInDown" data-wow-delay=".6s">
                             <span class="title-explore position-relative wow fadeInRight d-inline-block" data-wow-delay=".4s">
                                 <img src="{{ asset('ascent/assets/img/abanner/text-layer.png') }}" alt="img" class="text-layer">
-                                Coding for Kids
+                                Coding for Kids:
                             </span>
-                                Building Skills,
+                                Unlock Creativity &
                             <span class="text-sount">
-                                Building Dreams
+                                Future Skills
                             </span>
                         </h1>
                         <p class="wow fadeInUp" data-wow-delay=".5s">
-                            We offer a variety of coding and digital design courses specifically tailored for young minds.
+                            Empowering young minds with fun, interactive coding courses for every skill level.
                         </p>
-                        <a href="{{ route('about') }}" class="theme-btn p4-bg">
+                        <a href="{{ route('register') }}" class="theme-btn p4-bg">
                             <span>
-                                Learn More
+                                Get Started Today
                             </span>
                         </a>
                     </div>
@@ -48,87 +48,6 @@
     <img src="{{ asset('ascent/assets/img/abanner/right-ring.png') }}" alt="img" class="right-ring">
     <img src="{{ asset('ascent/assets/img/abanner/upen-element.png') }}" alt="img" class="global-upen">
     <!-- Element -->
-</section>
-
-<!-- Talk Counter Section Start -->
-<section class="talk-counter space-top overflow-hidden">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-8">
-                <div class="talk-content">
-                    <div class="section-title mb-60">
-                        <span class="sub-title wow fadeInUp p2-clr">
-                            Number Talks
-                        </span>
-                        <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                            Invest in education invest <br>
-                            in the future
-                        </h3>
-                        <p class="wow fadeInUp" data-wow-delay=".4s">
-                            Our expert instructors are more than just teachers—they're mentors who inspire and nurture creativity. With a curriculum that seamlessly blends fun with learning, we aim to make technology an adventure, whether through coding, game design, or digital art.
-                        </p>
-                        {{-- <a href="contact.html" class="theme-btn gra-border2">
-                            <span class="black fw-medium">
-                                Get a quote
-                            </span>
-                        </a> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
-                <div class="counter-inner">
-                    <div class="counter-talk-items gra-border round10 mb-30">
-                        <div class="icon iconbg-v2">
-                            <img src="{{ asset('ascent/assets/img/aicon/icon1.png') }}" alt="img">
-                        </div>
-                        <div class="content">
-                            <h3>
-                                <span class="count">150</span>
-                            </h3>
-                            <p>Running Students</p>
-                        </div>
-                    </div>
-                    <div class="counter-talk-items gra-border round10">
-                        <div class="icon iconbg-v4">
-                            <img src="{{ asset('ascent/assets/img/aicon/icon3.png') }}" alt="img">
-                        </div>
-                        <div class="content">
-                            <h3>
-                                <span class="count">2</span>
-                            </h3>
-                            <p>Award Winning</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".5s">
-                <div class="counter-inner">
-                    <div class="counter-talk-items gra-border round10 mb-30">
-                        <div class="icon iconbg-v3">
-                            <img src="{{ asset('ascent/assets/img/aicon/icon2.png') }}" alt="img">
-                        </div>
-                        <div class="content">
-                            <h3>
-                                <span class="count">500</span>
-                            </h3>
-                            <p>Completed</p>
-                        </div>
-                    </div>
-                    <div class="counter-talk-items gra-border round10">
-                        <div class="icon iconbg-v5">
-                            <img src="{{ asset('ascent/assets/img/aicon/icon4.png') }}" alt="img">
-                        </div>
-                        <div class="content">
-                            <h3>
-                                <span class="count">25</span>
-                            </h3>
-                            <p>Parent/Guardian Satisfaction</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
 
 <!-- Aboutv1 Section Start -->
@@ -156,7 +75,7 @@
                         <div class="academy-box2 gra-border round10 wow fadeInUp" data-wow-delay="1600">
                             <div class="content">
                                 <h3>
-                                    <span class="count">5</span>+
+                                    <span class="count">7</span>+
                                 </h3>
                                 <p>years of experiences</p>
                             </div>
@@ -174,12 +93,12 @@
                             Unlock Your Child's Potentials!
                         </h3>
                         <p class="mb-24 wow fadeInUp" data-wow-delay=".4s">
-                            Welcome to Tech Child, where we are dedicated to empowering the next generation through the exciting world of technology. Our mission is to make coding and digital creativity accessible, engaging, and fun for kids of all ages. At Tech Child, we believe that every child has the potential to be a creator, innovator, and problem-solver, and we’re here to guide them every step of the way.
+                            Our mission is to make coding accessible, enjoyable, and meaningful for children of all backgrounds. We believe in empowering the next generation with the tools and skills they need to succeed in a digital world.  Our pathways are designed to nurture creativity and build skills progressively, guiding students from foundational knowledge to advanced concepts at their own pace. Each pathway encourages growth, curiosity, and a deeper understanding of coding and design.
                         </p>
 
                         <a href="{{ route('about') }}" class="theme-btn gra-border2">
                             <span class="black fw-medium">
-                                Read More
+                                Learn more about us
                             </span>
                         </a>
                     </div>
@@ -188,6 +107,87 @@
         </div>
     </div>
 </section>
+
+<!-- Talk Counter Section Start -->
+<section class="talk-counter space-top overflow-hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8">
+                <div class="talk-content">
+                    <div class="section-title mb-60">
+                        <span class="sub-title wow fadeInUp p2-clr">
+                            Invest in Learning, Invest in the Future
+                        </span>
+                        <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
+                            Shaping Tomorrow's Innovators, One Code at a Time
+                        </h3>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">
+                            Our experienced instructors aren’t just teachers—they’re mentors who spark curiosity and build confidence. With a hands-on, kid-friendly curriculum, we make learning to code an exciting adventure
+                        </p>
+                        {{-- <a href="contact.html" class="theme-btn gra-border2">
+                            <span class="black fw-medium">
+                                Get a quote
+                            </span>
+                        </a> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                <div class="counter-inner">
+                    <div class="counter-talk-items gra-border round10 mb-30">
+                        <div class="icon iconbg-v2">
+                            <img src="{{ asset('ascent/assets/img/aicon/icon1.png') }}" alt="img">
+                        </div>
+                        <div class="content">
+                            <h3>
+                                <span class="count">500</span>+
+                            </h3>
+                            <p>Young Techies</p>
+                        </div>
+                    </div>
+                    <div class="counter-talk-items gra-border round10">
+                        <div class="icon iconbg-v4">
+                            <img src="{{ asset('ascent/assets/img/aicon/icon3.png') }}" alt="img">
+                        </div>
+                        <div class="content">
+                            <h3>
+                                <span class="count">7</span>+
+                            </h3>
+                            <p>Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".5s">
+                <div class="counter-inner">
+                    <div class="counter-talk-items gra-border round10 mb-30">
+                        <div class="icon iconbg-v3">
+                            <img src="{{ asset('ascent/assets/img/aicon/icon2.png') }}" alt="img">
+                        </div>
+                        <div class="content">
+                            <h3>
+                                <span class="count">95</span>%
+                            </h3>
+                            <p>Satisfaction</p>
+                        </div>
+                    </div>
+                    <div class="counter-talk-items gra-border round10">
+                        <div class="icon iconbg-v5">
+                            <img src="{{ asset('ascent/assets/img/aicon/icon4.png') }}" alt="img">
+                        </div>
+                        <div class="content">
+                            <h3>
+                                <span class="count">3</span>+
+                            </h3>
+                            <p>Countries reached</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
  <!-- Service Details Section Start -->
  <section class="service-dtails overflow-hidden section-padding position-relative">
@@ -203,13 +203,13 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <a href="{{ route('course.details', ['course' => $course->id]) }}">
                             <div class="details-thumb-middile w-100">
-                                <img src="{{ asset('ascent/assets/img/aservices/details-middle1.png') }}" alt="img" class="w-100 round10">
+                                <img src="{{ url('storage/images/'.$course->image) }}" alt="img" class="w-100 round10">
                             </div>
                             <div class="mt-2">
                                 <h5>{{ $course->title }}</h5>
                             </div>
                             <div>
-                                <h6>${{ number_format($course->amount, 2) }}</h6>
+                                <h6>${{ number_format($course->amount_usd, 2) }}, &#8358;{{ number_format($course->amount_ngn, 2) }}</h6>
                             </div>
                         </a>
                     </div>
@@ -222,6 +222,108 @@
     </div>
 </section>
 
+<!-- Faq Section Start -->
+<section class="faq-sectionv mt-60 overflow-hidden space-bottom">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6 col-md-5">
+                <div class="faq-thumbs">
+                    <img src="{{ asset('ascent/assets/img/about/faq.png') }}" alt="img">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-7">
+                <div class="faq-content">
+                    <div class="section-title mb-40">
+                        <span class="sub-title wow fadeInUp p5-clr">
+                            Some Faq
+                        </span>
+                        <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
+                            Why Coding Matters for Kids
+                        </h3>
+                    </div>
+                    <div class="tab-faq faq">
+                        <div class="accordion-section d-grid gap-xxl-4 gap-lg-3 gap-2">
+                            <div class="accordion-single">
+                                <h5 class="header-area">
+                                    <button
+                                        class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
+                                        type="button">
+                                        Develops Problem-Solving Skills
+                                    </button>
+                                </h5>
+                                <div class="content-area">
+                                    <div class="content-body">
+                                        <p>
+                                            Coding teaches kids how to think logically and approach challenges with creative solutions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-single">
+                                <h5 class="header-area">
+                                    <button
+                                        class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
+                                        type="button">
+                                        Builds Future-Ready Skills
+                                    </button>
+                                </h5>
+                                <div class="content-area">
+                                    <div class="content-body">
+                                        <p>
+                                            In our tech-driven world, coding is a valuable skill that gives kids an advantage in school and future careers.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-single">
+                                <h5 class="header-area">
+                                    <button
+                                        class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
+                                        type="button">
+                                        Encourages Creativity and Curiosity
+                                    </button>
+                                </h5>
+                                <div class="content-area">
+                                    <div class="content-body">
+                                        <p>
+                                            Kids learn to bring their ideas to life through interactive, fun projects that foster innovation.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- <div class="accordion-single">
+                                <h5 class="header-area">
+                                    <button
+                                        class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
+                                        type="button">
+                                        What are the prerequisites course?
+                                    </button>
+                                </h5>
+                                <div class="content-area">
+                                    <div class="content-body">
+                                        <p>
+                                            It is a long established fact that a reader will be distracted by the
+                                            read content of a page when looking at its layout.
+                                            Many desktop publish packages and web page editors now use Loremdefault
+                                            model
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+
+                    <a href="{{ route('register') }}" class="theme-btn p2-bg mt-10">
+                        <span>
+                            Start your journey
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Testimonial V1 Section Start -->
 <section class="testimonial-sectionv1 section-padding overflow-hidden white-bg">
     <div class="container">
@@ -229,7 +331,7 @@
             <div class="col-lg-4 col-md-5">
                 <div class="section-title">
                     <span class="sub-title wow fadeInUp p5-clr">
-                        Clients Testimonial
+                        What our Parents say
                     </span>
                     <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
                         Unlocking the Power of Wonderworks Child
@@ -340,237 +442,21 @@
                         </div>
                     </div>
 
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Faq Section Start -->
-{{-- <section class="faq-sectionv mt-60 overflow-hidden space-bottom">
-    <div class="container">
-        <div class="row align-items-center g-4">
-            <div class="col-lg-6 col-md-5">
-                <div class="faq-thumbs">
-                    <img src="{{ asset('ascent/assets/img/about/faq.png') }}" alt="img">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-7">
-                <div class="faq-content">
-                    <div class="section-title mb-40">
-                        <span class="sub-title wow fadeInUp p5-clr">
-                            Some Faq
+                    <a href="{{ route('register') }}" class="theme-btn p2-bg mt-10">
+                        <span>
+                            Join our community
                         </span>
-                        <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                            Empowering Children Through Education Playful Mind
-                        </h3>
-                    </div>
-                    <div class="tab-faq faq">
-                        <div class="accordion-section d-grid gap-xxl-4 gap-lg-3 gap-2">
-                            <div class="accordion-single">
-                                <h5 class="header-area">
-                                    <button
-                                        class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
-                                        type="button">
-                                        What are the prerequisites for this course?
-                                    </button>
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>
-                                            It is a long established fact that a reader will be distracted by the
-                                            read content of a page when looking at its layout.
-                                            Many desktop publish packages and web page editors now use Loremdefault
-                                            model
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-single">
-                                <h5 class="header-area">
-                                    <button
-                                        class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
-                                        type="button">
-                                        What subjects will I learn in school?
-                                    </button>
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>
-                                            It is a long established fact that a reader will be distracted by the
-                                            read content of a page when looking at its layout.
-                                            Many desktop publish packages and web page editors now use Loremdefault
-                                            model
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-single">
-                                <h5 class="header-area">
-                                    <button
-                                        class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
-                                        type="button">
-                                        How long is a school day?
-                                    </button>
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>
-                                            It is a long established fact that a reader will be distracted by the
-                                            read content of a page when looking at its layout.
-                                            Many desktop publish packages and web page editors now use Loremdefault
-                                            model
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-single">
-                                <h5 class="header-area">
-                                    <button
-                                        class="accordion-btn d-flex align-items-center d-flex position-relative w-100"
-                                        type="button">
-                                        What are the prerequisites course?
-                                    </button>
-                                </h5>
-                                <div class="content-area">
-                                    <div class="content-body">
-                                        <p>
-                                            It is a long established fact that a reader will be distracted by the
-                                            read content of a page when looking at its layout.
-                                            Many desktop publish packages and web page editors now use Loremdefault
-                                            model
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-
-<!-- professional Section Start -->
-<section class="professional-sectionv1 overflow-hidden mt-2 space-bottom position-relative">
-    <div class="container">
-        <div class="row justify-content-center mb-60">
-            <div class="col-lg-6">
-                <div class="section-title text-center">
-                    <span class="sub-title wow fadeInUp p5-clr">
-                        Meet Our Professional
-                    </span>
-                    <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
-                        Expert Instructors & Educators
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="row g-lg-4 g-3 justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="professional-item">
-                    <div class="thumb mb-24">
-                        <img src="{{ asset('ascent/assets/img/aprotfolio/professonal1.png') }}" alt="img">
-                    </div>
-                    <div class="content">
-                        <div class="mb-24">
-                            <h4 class="mb-2">
-                                <a href="#" class="black">
-                                    Emmanuel
-                                </a>
-                            </h4>
-                            <span>
-                                {{-- Marketing Coordinator --}}
-                            </span>
-                        </div>
-                        <div class="social-wrapper footer-social d-flex align-items-center">
-                            <a href="#" class="white"><i class="white fab fa-facebook-f"></i></a>
-                            <a href="#" class="white">
-                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.55735 5.16157L10.5183 0.65625H9.57971L6.14039 4.56816L3.39341 0.65625H0.225098L4.37906 6.57174L0.225098 11.2963H1.16378L4.79579 7.16516L7.6968 11.2963H10.8651L6.55712 5.16157H6.55735ZM5.2717 6.62386L4.85082 6.03481L1.502 1.34768H2.94375L5.64629 5.13034L6.06717 5.71939L9.58015 10.6363H8.13839L5.2717 6.62409V6.62386Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                            <a href="#" class="white"><i class="white fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" class="white"><i class="white fa-brands fa-pinterest-p"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="professional-item">
-                    <div class="thumb mb-24">
-                        <img src="{{ asset('ascent/assets/img/aprotfolio/professonal2.png') }}" alt="img">
-                    </div>
-                    <div class="content">
-                        <div class="mb-24">
-                            <h4 class="mb-2">
-                                <a href="#" class="black">
-                                    Excel
-                                </a>
-                            </h4>
-                            <span>
-                                {{-- Marketing Coordinator --}}
-                            </span>
-                        </div>
-                        <div class="social-wrapper footer-social d-flex align-items-center">
-                            <a href="#" class="white"><i class="white fab fa-facebook-f"></i></a>
-                            <a href="#" class="white">
-                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.55735 5.16157L10.5183 0.65625H9.57971L6.14039 4.56816L3.39341 0.65625H0.225098L4.37906 6.57174L0.225098 11.2963H1.16378L4.79579 7.16516L7.6968 11.2963H10.8651L6.55712 5.16157H6.55735ZM5.2717 6.62386L4.85082 6.03481L1.502 1.34768H2.94375L5.64629 5.13034L6.06717 5.71939L9.58015 10.6363H8.13839L5.2717 6.62409V6.62386Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                            <a href="#" class="white"><i class="white fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" class="white"><i class="white fa-brands fa-pinterest-p"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="professional-item">
-                    <div class="thumb mb-24">
-                        <img src="{{ asset('ascent/assets/img/aprotfolio/professonal3.png') }}" alt="img">
-                    </div>
-                    <div class="content">
-                        <div class="mb-24">
-                            <h4 class="mb-2">
-                                <a href="#" class="black">
-                                    Nelson
-                                </a>
-                            </h4>
-                            <span>
-                                    {{-- Marketing Coordinator --}}
-                            </span>
-                        </div>
-                        <div class="social-wrapper footer-social d-flex align-items-center">
-                            <a href="#" class="white"><i class="white fab fa-facebook-f"></i></a>
-                            <a href="#" class="white">
-                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.55735 5.16157L10.5183 0.65625H9.57971L6.14039 4.56816L3.39341 0.65625H0.225098L4.37906 6.57174L0.225098 11.2963H1.16378L4.79579 7.16516L7.6968 11.2963H10.8651L6.55712 5.16157H6.55735ZM5.2717 6.62386L4.85082 6.03481L1.502 1.34768H2.94375L5.64629 5.13034L6.06717 5.71939L9.58015 10.6363H8.13839L5.2717 6.62409V6.62386Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                            <a href="#" class="white"><i class="white fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" class="white"><i class="white fa-brands fa-pinterest-p"></i></a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 
 <!-- Knowledge Section Start -->
-<section class="knowledge-section cmn-bg space-top overflow-hidden space-bottom position-relative">
+{{-- <section class="knowledge-section cmn-bg space-top overflow-hidden space-bottom position-relative">
     <div class="container">
         <div class="row justify-content-md-between justify-content-center align-items-center g-4">
             <div class="col-lg-5 col-md-5 col-sm-10">
@@ -669,7 +555,7 @@
     <!-- Element -->
     <img src="{{ asset('ascent/assets/img/about/knowledge-lshpe.png') }}" alt="img" class="knowledge-shapeleft d-xl-block d-none">
     <img src="{{ asset('ascent/assets/img/about/knowledge-animal.png') }}" alt="img" class="knowledge-animal">
-</section>
+</section> --}}
 
 <!--<< Inspair Section Start >>-->
 {{-- <section class="inspair-section position-relative overflow-hidden">

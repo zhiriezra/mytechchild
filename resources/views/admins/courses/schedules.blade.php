@@ -7,7 +7,7 @@
 
         <div class="common-content-box mb-40 wow fadeInUp" data-wow-delay=".3s">
             <h4 class="custom-title black mb-lg-3 mb-2">
-                Update Schedules for {{ $course->title }}
+                Manage Schedules
             </h4>
 
             @if(session('error'))
@@ -21,9 +21,9 @@
             <div class="mb-60">
 
                 <div>
-                    <a href="{{ route('teacher.add.schedule', ['course' => $course->id]) }}" class="btn btn-sm btn-primary">Add Schedule</a>
+                    {{-- <a href="{{ route('teacher.add.schedule', ['course' => $course->id]) }}" class="btn btn-sm btn-primary">Add Schedule</a> --}}
                 </div>
-                @if($course->schedules->isEmpty())
+                @if($schedules->isEmpty())
                     <p>No schedules available for this course.</p>
                 @else
                     <table class="table table-striped text-sm">
@@ -32,17 +32,20 @@
                                 <th>#</th>
                                 <th>Start Time</th>
                                 <th>End Time</th>
+                                <th>Course</th>
                                 <th>Confirmed Slots</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($course->schedules as $key => $schedule)
+                            @foreach($schedules as $key => $schedule)
                                 <tr>
                                     <td>{{ $key+1 }}</td>
                                     <td>{{ \Carbon\Carbon::parse($schedule->start_time)->toDayDateTimeString() }}</td>
                                     <td>{{ \Carbon\Carbon::parse($schedule->end_time)->toDayDateTimeString() }}</td>
+                                    <td>{{ $schedule->course->title }}</td>
+
                                     <td>
                                         @if($schedule->confirmedBookings()->count() == $schedule->availableSlots())
                                             <span class="text-sm text-success">Capacity Full</span>
@@ -54,7 +57,15 @@
                                         <span class="text-sm p-1 {{ $schedule->status == 'approved' ? 'text-success' : ($schedule->status == 'declined' ? 'text-danger' : 'text-warning')}}">{{ $schedule->status }}</span>
                                     </td>
                                     <td>
-                                        <a href="{{ route('teacher.edit.schedule', ['schedule' => $schedule->id]) }}" class="btn btn-sm btn-info">Edit</a>
+                                        {{-- <a href="{{ route('teacher.edit.schedule', ['schedule' => $schedule->id]) }}" class="btn btn-sm btn-info">Edit</a> --}}
+                                        @if($schedule->status == 'pending')
+                                            <a class="btn btn-success btn-sm" href="{{ route('admin.approve.schedule', ['schedule' => $schedule->id])}}">Approve</a>
+                                            <a class="btn btn-sm btn-danger" href="{{ route('admin.decline.schedule', ['schedule' => $schedule->id])}}">Decline</a>
+                                        @elseif($schedule->status == 'approved')
+                                            <a class="btn btn-sm btn-danger" href="{{ route('admin.decline.schedule', ['schedule' => $schedule->id])}}">Decline</a>
+                                        @else
+                                            <a class="btn btn-success btn-sm" href="{{ route('admin.approve.schedule', ['schedule' => $schedule->id])}}">Approve</a>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
@@ -64,7 +75,7 @@
 
             </div>
             <div class="text-center">
-                <a href="{{ route('teacher.dashboard') }}" class="btn btn-primary">Back to Classes List</a>
+                <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Back to Dashboard</a>
             </div>
 
         </div>

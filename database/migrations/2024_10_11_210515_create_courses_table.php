@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('image');
+            $table->string('image')->default('default.png');
             $table->text('description');
-            $table->decimal('amount', 9,3);
+            $table->decimal('amount_ngn', 9,3);
+            $table->decimal('amount_usd', 9,3);
             $table->boolean('active');
             $table->timestamps();
         });

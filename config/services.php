@@ -31,4 +31,12 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'stripe' => [
+        'secret' => env('STRIPE_SECRET_TEST'),
+    ],
+
+    'paystack' => [
+        'secret' => env('PAYSTACK_SECRET_TEST'),
+    ],
+
 ];

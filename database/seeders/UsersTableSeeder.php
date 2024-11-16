@@ -36,16 +36,27 @@ class UsersTableSeeder extends Seeder
             'role' => 'teacher',
         ]);
 
-        Profile::create([
-            'user_id' => $user1->id,
+        $user3 =  User::create([
+            'name' => 'Admin User',
+            'email' => 'admin@gmail.com',
+            'username' => 'admin',
+            'mobile' => '07035621553',
+            'password' => bcrypt('password'),
+            'role' => 'admin',
         ]);
 
         Profile::create([
-            'user_id' => $user2->id,
+            'user_id' => $user1->id,
         ]);
 
         Teacher::create([
             'user_id' => $user2->id,
         ]);
+
+        Profile::create([
+            'user_id' => $user3->id,
+        ]);
+
+
     }
 }
