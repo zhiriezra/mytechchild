@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Courses;
 
 use App\Models\Booking;
+use App\Models\Course;
 use App\Models\CourseSchedule;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -15,6 +16,8 @@ class CourseScheduleSelector extends Component
     public $selectedDate = null;
     public $selectedTime = null;
     public $course;
+    public $courses;
+    public $selectedCourse;
 
     public $error = false;
     public $errorMessage = '';
@@ -26,6 +29,16 @@ class CourseScheduleSelector extends Component
     }
 
     public function mount(){
+        $this->loadCourses();
+        // $this->loadDates();
+    }
+
+    public function loadCourses(){
+        $this->courses = Course::all();
+    }
+
+    public function updatedSelectedCourse($value){
+        $this->course = Course::find($value);
         $this->loadDates();
     }
 

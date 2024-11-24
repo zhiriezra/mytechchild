@@ -1,17 +1,33 @@
 <div>
-    <div class="mb-4">
-        <h5 class="pb-2">Select a Date:</h5>
-        <div>
-            @if(!$dates)
-                <div class="alert alert-info">
-                    No schedule for this class.
+    <div class="">
+
+        <div class="row">
+            <div class="col-sm-4 mb-4">
+                <h5 class="pb-2">Select a Course:</h5>
+                <select class="form-control border p-2" wire:model="selectedCourse">
+                    <option value="">-- Select course --</option>
+                    @foreach($courses as $course)
+                        <option value="{{ $course->id }}">{{ $course->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="col-sm-8 mb-4">
+                <h5 class="pb-2">Select Schedule:</h5>
+                <div>
+                    @if(!$dates)
+                        <div class="alert alert-info">
+                            No schedule for this class.
+                        </div>
+                    @endif
+                    @foreach($dates as $date)
+                        <button class="btn btn-outline-danger rounded-pill me-2 mb-2 text-sm" wire:click="selectDate('{{ $date }}')" @if($selectedDate === $date) active @endif>
+                            {{ \Carbon\Carbon::parse($date)->format('D') }} - {{ \Carbon\Carbon::parse($date)->format('F j, Y') }}
+                        </button>
+                    @endforeach
                 </div>
-            @endif
-            @foreach($dates as $date)
-                <button class="btn btn-outline-danger rounded-pill me-2 mb-2 text-sm" wire:click="selectDate('{{ $date }}')" @if($selectedDate === $date) active @endif>
-                    {{ \Carbon\Carbon::parse($date)->format('D') }} - {{ \Carbon\Carbon::parse($date)->format('F j, Y') }}
-                </button>
-            @endforeach
+            </div>
+
         </div>
     </div>
 
@@ -44,7 +60,7 @@
     @endif
 
     @if($error)
-        <div class="alert alert-info">
+        <div class="alert alert-danger">
             {{ $errorMessage }}
         </div>
     @endif

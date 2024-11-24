@@ -49,6 +49,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('approve/{schedule}', [AdminController::class, 'approveSchedule'])->name('approve.schedule');
         Route::get('decline/{schedule}', [AdminController::class, 'declineSchedule'])->name('decline.schedule');
 
+        // manage courses
         Route::get('courses', [AdminController::class, 'courses'])->name('courses');
         Route::get('add-course', [AdminController::class, 'addCourse'])->name('add.course');
         Route::post('add-course', [AdminController::class, 'storeCourse'])->name('store.course');
@@ -57,6 +58,11 @@ Route::group(['middleware' => 'auth'], function(){
 
         Route::get('activate/{course}', [AdminController::class, 'activateCourse'])->name('activate.course');
         Route::get('deactivate/{course}', [AdminController::class, 'deactivateCourse'])->name('deactivate.course');
+
+        // manage teachers
+        Route::get('teachers', [AdminController::class, 'teachers'])->name('teachers');
+        Route::get('add-teacher', [AdminController::class, 'addTeacher'])->name('add.teacher');
+        Route::post('add-teacher', [AdminController::class, 'storeTeacher'])->name('store.teacher');
 
     });
 

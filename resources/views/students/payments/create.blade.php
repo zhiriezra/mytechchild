@@ -32,7 +32,7 @@
                                     <label class="" for="amount">
                                         {{ __('Amount') }}
                                     </label>
-                                    <input type="number" class="form-control" name="amount" value="{{ $course->amount }}" readonly="readonly">
+                                    <input type="number" class="form-control" name="amount" value="{{ $course->amount_usd }}" readonly="readonly">
                                     @error('amount')
                                         <span class="text-danger text-sm">{{$message}}</span>
                                     @enderror
@@ -52,7 +52,7 @@
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gateway" value="stripe">
+                                    <input class="form-check-input" type="radio" name="gateway" value="stripe" checked>
                                     <label class="form-check-label" for="stripe">
                                         Stripe
                                     </label>
@@ -68,25 +68,12 @@
                                     {{ __('Payment Source: (applicable only for stripe)') }}
                                 </label>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="source" value="tok_visa">
-                                    <label class="form-check-label" for="paystack">
-                                        Tok Visa
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="source" value="other">
-                                    <label class="form-check-label" for="stripe">
-                                        Ezra Visa
-                                    </label>
-                                </div>
+                                <input class="form-check-input" type="text" name="source" value="tok_visa" hidden>
 
                                 @error('source')
                                     <span class="text-danger text-sm">{{$message}}</span>
                                 @enderror
                             </div>
-
 
                             <div class="col-lg-12">
                                 <div class="comment-grp">

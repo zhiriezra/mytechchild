@@ -1,5 +1,5 @@
 <div>
-    <div class="mb-4">
+    <div class="mt-4">
         <h5 class="pb-2">My Bookings</h5>
     </div>
 

@@ -27,11 +27,9 @@
     <link rel="stylesheet" href="{{ asset('ascent/assets/css/meanmenu.css') }}">
     <!--<< Swiper Bundle.css') }} >>-->
     <link rel="stylesheet" href="{{ asset('ascent/assets/css/swiper-bundle.min.css') }}">
-    <!--<< Nice Select.css') }} >>-->
-    <link rel="stylesheet" href="{{ asset('ascent/assets/css/nice-select.css') }}">
     <!--<< Main.css') }} >>-->
     <link rel="stylesheet" href="{{ asset('ascent/assets/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
     @livewireStyles
 </head>
 
@@ -125,7 +123,7 @@
     <div class="offcanvas__overlay"></div>
 
     <!-- Header Top Section Start -->
-    <div class="header-top-section d-lg-block d-none bg-success">
+    <div class="header-top-section d-lg-block d-none">
         <div class="container">
             <div class="header-top-wrapper">
                 <ul class="contact-list">
@@ -161,11 +159,11 @@
                                             </li>
 
                                             <li>
-                                                <a href="{{ route('admin.courses') }}">Manage Classes</a>
+                                                <a href="{{ route('admin.courses') }}">Manage Courses</a>
                                             </li>
 
                                             <li>
-                                                <a href="#">Manage Teachers</a>
+                                                <a href="{{ route('admin.teachers') }}">Manage Teachers</a>
                                             </li>
                                         @endif
 
@@ -342,7 +340,7 @@
         <!-- Element -->
     </footer>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 
     <!--<< All JS Plugins >>-->
     <script src="{{ asset('ascent/assets/js/jquery-3.7.1.min.js') }}"></script>
@@ -350,8 +348,6 @@
     <script src="{{ asset('ascent/assets/js/viewport.jquery.js') }}"></script>
     <!--<< Bootstrap Js >>-->
     <script src="{{ asset('ascent/assets/js/bootstrap.bundle.min.js') }}"></script>
-    <!--<< Nice Select Js >>-->
-    <script src="{{ asset('ascent/assets/js/jquery.nice-select.min.js') }}"></script>
     <!--<< Waypoints Js >>-->
     <script src="{{ asset('ascent/assets/js/jquery.waypoints.js') }}"></script>
     <!--<< Counterup Js >>-->

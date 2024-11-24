@@ -9,6 +9,9 @@ use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use PDO;
 
 class AdminController extends Controller
 {
@@ -43,7 +46,7 @@ class AdminController extends Controller
 
     }
 
-    // classes management controller
+    // classes management methods
 
     public function courses(){
         $courses = Course::all();
@@ -145,5 +148,71 @@ class AdminController extends Controller
         return redirect()->back();
 
     }
+
+    // Manage teachers
+
+    public function teachers(){
+        $teachers = User::teachers();
+        return view('admins.teachers.index', compact('teachers'));
+    }
+
+    public function addTeacher(){
+        $courses = Course::all();
+        return view('admins.teachers.add', compact('courses'));
+    }
+    public function storeTeacher(Request $request){
+
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|unique:users,email',
+            'mobile' => 'required|unique:users,mobile',
+            'courses' => 'required',
+            'image' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+
+        $imageName = 'default.png';
+
+        if($request->hasFile('image')){
+
+            $image = $request->file('image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+
+            // Store the image in the "public/images" directory
+            $image->storeAs('public/profile', $imageName);
+        }
+
+        DB::transaction(function () use ($request, $imageName) {
+
+            // create user
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'mobile' => $request->mobile,
+                'username' => strstr($request->email, '@', true),
+                'role' => 'teacher',
+                'profile_image' => $imageName,
+                'password' => Hash::make('password123'),
+            ]);
+
+            // create teacher
+            $teacher = Teacher::create([
+                'user_id' => $user->id
+            ]);
+
+            // associate teacher with course
+            foreach($request->courses as $course){
+                DB::table('course_teacher')->insert([
+                    'teacher_id' => $teacher->id,
+                    'course_id' => $course
+                ]);
+            }
+
+
+        });
+
+        session()->flash('success', 'Successfully added new teacher');
+        return redirect()->route('admin.teachers');
+    }
+
 
 }

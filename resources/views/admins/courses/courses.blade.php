@@ -7,7 +7,7 @@
 
         <div class="common-content-box mb-40 wow fadeInUp" data-wow-delay=".3s">
             <h4 class="custom-title black mb-lg-3 mb-2">
-                Manage Classes
+                Manage Course
             </h4>
 
             @if(session('error'))
@@ -21,7 +21,7 @@
             <div class="mb-60">
 
                 <div>
-                    <a href="{{ route('admin.add.course') }}" class="btn btn-sm btn-primary">Add Class</a>
+                    <a href="{{ route('admin.add.course') }}" class="btn btn-sm btn-primary">Add Course</a>
                 </div>
                 @if($courses->isEmpty())
                     <p>No schedules available for this course.</p>

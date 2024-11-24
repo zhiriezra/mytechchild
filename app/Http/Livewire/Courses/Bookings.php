@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Bookings extends Component
 {
-    public $course;
+    // public $course;
     public $bookings;
 
     protected $listeners = ['bookingCreated' => 'loadBookings'];
@@ -20,9 +20,9 @@ class Bookings extends Component
     public function loadBookings(){
         $this->bookings = Booking::with('courseSchedule.course')
             ->where('user_id', auth()->id())
-            ->whereHas('courseSchedule.course', function($query){
-                $query->where('course_id', $this->course->id);
-            })
+            // ->whereHas('courseSchedule.course', function($query){
+            //     $query->where('course_id', $this->course->id);
+            // })
             ->get();
     }
 

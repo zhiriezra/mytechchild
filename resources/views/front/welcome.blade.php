@@ -195,7 +195,7 @@
 
         <div class="common-content-box mb-40 wow fadeInUp" data-wow-delay=".3s">
             <h4 class="custom-title black mb-lg-3 mb-2">
-                Our Popular Classes
+                Our Popular Courses
             </h4>
 
             <div class="row justify-content-center g-xl-4 g-3 mb-60">
@@ -234,9 +234,9 @@
             <div class="col-lg-6 col-md-7">
                 <div class="faq-content">
                     <div class="section-title mb-40">
-                        <span class="sub-title wow fadeInUp p5-clr">
+                        {{-- <span class="sub-title wow fadeInUp p5-clr">
                             Some Faq
-                        </span>
+                        </span> --}}
                         <h3 class="m-title wow fadeInUp black" data-wow-delay=".3s">
                             Why Coding Matters for Kids
                         </h3>
@@ -338,9 +338,7 @@
                     </h3>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                See how our coding classes are making a difference in the lives of young learners. Read inspiring testimonials from parents and students who have achieved incredible results.
-            </div>
+            
         </div>
         <div class="testimonial-innerbox">
             <div class="row justify-content-end">

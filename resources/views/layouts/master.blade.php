@@ -65,14 +65,14 @@
                     <div class="offcanvas__contact">
                         <h4>Contact Info</h4>
                         <ul>
-                            <li class="d-flex align-items-center">
+                            {{-- <li class="d-flex align-items-center">
                                 <div class="offcanvas__contact-icon">
                                     <i class="fal fa-map-marker-alt"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
                                     <a target="_blank" href="#"> Central Business District Area, Abuja.</a>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li class="d-flex align-items-center">
                                 <div class="offcanvas__contact-icon mr-15">
                                     <i class="fal fa-envelope"></i>
@@ -127,10 +127,6 @@
                     <li>
                         <i class="far fa-envelope"></i>
                         <a href="hello@mytechchild.com" class="link">hello@mytechchild.com</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <a href="#" class="link">Central Business District Area, Abuja.</a>
                     </li>
                 </ul>
                 <div class="social-wrapper d-flex align-items-center">
@@ -266,12 +262,12 @@
                                 <h4 class="white">Contact Us</h4>
                             </div>
                             <ul class="list-area list-contact">
-                                <li>
+                                {{-- <li>
                                     <i class="fa-solid fa-location-dot"></i>
                                     <span class="lited">
                                         Central Business District Area, Abuja.
                                     </span>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <i class="far fa-envelope"></i>
                                     <a href="hello@mytechchild.com" class="link">hello@mytechchild.com</a>
