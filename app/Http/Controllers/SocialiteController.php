@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
@@ -22,6 +23,7 @@ class SocialiteController extends Controller
                 $user = User::create([
                     'name' => $googleUser->getName(),
                     'email' => $googleUser->getEmail(),
+                    'email_verification' => Carbon::now(),
                     // 'google_id' => $googleUser->getId(),
                     'username' => strstr($googleUser->getEmail(), '@', true),
                     'role' => 'student',
@@ -34,6 +36,7 @@ class SocialiteController extends Controller
             return redirect()->route($role.'dashboard');
 
         } catch (\Exception $e){
+            session()->flash('success', 'logged in successful');
             return redirect('/login')->withErrors(['error' => 'Unable to login with Google']);
         }
     }

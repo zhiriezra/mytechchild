@@ -80,7 +80,7 @@ Route::group(['middleware' => 'auth'], function(){
     });
 
     // DON'T FORGET TO ADD THESE MIDDLEWARES   1. verified 2. profile.completed
-    Route::group(['middleware' => ['role:student'], 'prefix' => 'student', 'as' => 'student.'], function () {
+    Route::group(['middleware' => ['role:student', 'verified', 'profile'], 'prefix' => 'student', 'as' => 'student.'], function () {
 
         Route::get('/dashboard', [StudentController::class, 'index'])->name('dashboard');
         Route::get('/courses/{course}/schedules', [StudentController::class, 'showCourseSchedules'])->name('courses.schedules');
