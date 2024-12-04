@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\StripeWebhookController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
@@ -99,3 +100,6 @@ Route::group(['middleware' => 'auth'], function(){
 Route::post('/webhook', [StripeWebhookController::class, 'handleWebhook']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified')->name('home');
+
+Route::get('/auth/google', [SocialiteController::class, 'redirectToGoogle'])->name('auth.google');
+Route::get('/auth/google/callback', [SocialiteController::class, 'handleGoogleCallback']);

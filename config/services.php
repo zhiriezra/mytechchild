@@ -39,4 +39,10 @@ return [
         'secret' => env('PAYSTACK_SECRET_TEST'),
     ],
 
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => 'https://mytechchild.com/google/oauth2callback.php',
+    ],
+
 ];
